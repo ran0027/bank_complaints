@@ -1,20 +1,20 @@
 # Bank Complaints Classifier
 
-My README follows the CRISP-DM process model for data science. [Learn more about CRISP-DM.](https://www.datascience-pm.com/crisp-dm-2)
+This README follows the CRISP-DM process model for data science. <a href="https://www.datascience-pm.com/crisp-dm-2" target="_blank">Learn more about CRISP-DM</a>.
 
-### BUSINESS UNDERSTANDING
+### Business Understanding
 
 Natural language processing is a buzzword in business today. One use case for NLP is to avoid tedious manual labeling of pieces of text or documents by training a machine learning classification algorithm to classify documents for you (after preprocessing the text using NLP techniques to prepare it for modeling.) This is what I have endeavored to do in this repository.
 
-### DATA UNDERSTANDING
+### Data Understanding
 
-The data we are working with was published by the Consumer Financial Protection Bureau on [data.gov](https://catalog.data.gov/dataset/consumer-complaint-database), and downloaded for use in this project on March 22, 2023.
+The data we are working with was published by the Consumer Financial Protection Bureau on <a href="https://catalog.data.gov/dataset/consumer-complaint-database" target="_blank">data.gov</a>, and downloaded for use in this project on March 22, 2023.
 
 The data is a collection of over 3 million complaints about consumer financial products and services.
 
 A record consists of a date of receipt, a product and sub-product about which the complaint was made, an issue and a sub-issue, a consumer “complaint narrative”, information about the company providing the product or service and any communication with said company, and some other data.
 
-### DATA PREPARATION
+### Data Preparation
 
 Only 1.2 million of the complaints had a “consumer complaint narrative”, which is the text that I used as a feature to train a classification model, so a dataset of about 1.2 million records was used for modeling, including validation and a holdout test set.
 
@@ -33,7 +33,7 @@ Next, I wrote some functions to perform the preprocessing of the data. These fun
 
 Note: This required the installation of a special package, ipynb, to import these functions from a notebook file into the main modeling notebook rather than a regular python .py file.
 
-### MODELING
+### Modeling
 
 The Jupyter notebook [classifier.ipynb](classifier.ipynb) contains the modeling process for this project.
 
@@ -41,10 +41,10 @@ After loading and preprocessing the data, and splitting the data into train-vali
 
 Several types of classifiers were trained on these representations. In addition to tuning standard hyperparameters for each classification algorithm, random undersampling and decomposition techniques (PCA) were also applied to attempt to improve model performance.
 
-### EVALUATION
+### Evaluation
 
 In this use case, the “best” model was determined by the model’s accuracy score. The best model had a validation accuracy of 79.5% and a holdout test accuracy of 80%.
 
-### DEPLOYMENT
+### Deployment
 
 This model has not been deployed.
